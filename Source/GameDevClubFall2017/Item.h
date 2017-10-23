@@ -23,12 +23,15 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintImplementableEvent, Category="Item");
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item")
+		UStaticMeshComponent* ItemMesh;
+
+	UFUNCTION(BlueprintImplementableEvent, Category="Item")
 		void Pickup();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Item");
+	UFUNCTION(BlueprintImplementableEvent, Category = "Item")
 		void Drop();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Item");
+	UFUNCTION(BlueprintImplementableEvent, Category = "Item")
 		void Use();
 };
