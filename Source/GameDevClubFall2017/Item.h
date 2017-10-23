@@ -26,12 +26,12 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item")
 		UStaticMeshComponent* ItemMesh;
 
-	UFUNCTION(BlueprintImplementableEvent, Category="Item")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category="Item")
 		void Pickup();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Item")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Item")
 		void Drop();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Item")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Item")
 		void Use();
 };
